@@ -1,0 +1,16 @@
+[user]
+	name = Robert Moses
+	email = rmoses@titaniumbytes.com
+	username = rmoses
+
+[init]
+	defaultBranch = master
+
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /run/current-system/sw/bin/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDUrZqxGgRlqqex4zmF3c660M+uMaHiJGyu5lOV+is1o
