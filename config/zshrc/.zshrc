@@ -51,6 +51,5 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# Aliases
-alias rebuild-nix="sudo nixos-rebuild switch --flake ~/.dotfiles/.#$HOST && source ~/.zshrc"
-alias c="clear"
+# Source Alias File
+source ~/.dotfiles/config/zshrc/aliases.zsh
