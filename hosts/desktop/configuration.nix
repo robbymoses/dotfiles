@@ -134,7 +134,7 @@
     _1password-gui
     spotify
   # Utilities
-    gccStdenv
+    gcc
     fzf
     bat
     git
