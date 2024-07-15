@@ -122,6 +122,7 @@
     alacritty
     starship
     fira-code-nerdfont
+    lazygit
   # Languages
     python312
     go
