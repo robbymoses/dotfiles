@@ -66,15 +66,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   
-  # enable docker
-  virtualisation.docker.enable = true;
-
-  # use docker without Root access (Rootless docker)
-  virtualisation.docker.rootless = {
-     enable = true;
-     setSocketVariable = true;
-  };
-
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   hardware.bluetooth.enable = true;
@@ -102,7 +93,7 @@
     isNormalUser = true;
     description = "Robert Moses";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -114,6 +105,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  environment.localBinInPath = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -123,13 +115,18 @@
     starship
     fira-code-nerdfont
     lazygit
+    yazi
   # Languages
-    python312
+    python311
+    poetry
+    pipx
     go
   # Runtimes
     bun
     nodejs_22
   # Applications
+    podman
+    podman-desktop
     vscode
     jetbrains.datagrip
     _1password-gui
