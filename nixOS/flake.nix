@@ -35,6 +35,13 @@
           specialArgs = {
             inherit pkgsStable pkgsUnstable;
           };
+        ra = nixosSystem {
+          inherit system;
+          modules = sharedModules ++ [./hosts/ra/flake.nix ];
+          specialArgs = {
+            inherit pkgsStable pkgsUnstable;
+          };
+        };
         };
       };
     };
