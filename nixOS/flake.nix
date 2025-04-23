@@ -30,20 +30,21 @@
     in {
       nixosConfigurations = {
         argos = nixosSystem {
-          inherit system;
-          modules = sharedModules ++ [ ./hosts/argos/flake.nix ];
-          specialArgs = {
-            inherit pkgsStable pkgsUnstable;
+            inherit system;
+            modules = sharedModules ++ [ ./hosts/argos/flake.nix ];
+            specialArgs = {
+              inherit pkgsStable pkgsUnstable;
+            };
           };
-        ra = nixosSystem {
-          inherit system;
-          modules = sharedModules ++ [./hosts/ra/flake.nix ];
-          specialArgs = {
-            inherit pkgsStable pkgsUnstable;
+          
+          ra = nixosSystem {
+            inherit system;
+            modules = sharedModules ++ [./hosts/ra/flake.nix ];
+            specialArgs = {
+              inherit pkgsStable pkgsUnstable;
+            };
           };
-        };
         };
       };
-    };
 }
 
