@@ -13,6 +13,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Starship
 eval "$(starship init zsh)"
 
+eval "$(zoxide init zsh)"
+
 # Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions

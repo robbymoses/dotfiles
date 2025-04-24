@@ -12,6 +12,9 @@
     stow
     zellij
   ] ++ (with pkgsUnstable; [
+    zoxide
+    yazi
+    fzf
     helix
     starship
     bitwarden-desktop
