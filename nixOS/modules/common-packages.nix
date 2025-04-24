@@ -9,8 +9,10 @@
     jq
     firefox
     zsh
+    stow
   ] ++ (with pkgsUnstable; [
     helix
+    starship
     bitwarden-desktop
     docker-compose
   ]);

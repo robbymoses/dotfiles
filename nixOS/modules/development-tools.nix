@@ -8,6 +8,7 @@
     neovim
     lazygit
     lazydocker
+    better-commits
   ]);
 }
 
