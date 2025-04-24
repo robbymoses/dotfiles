@@ -10,6 +10,7 @@
     firefox
     zsh
     stow
+    zellij
   ] ++ (with pkgsUnstable; [
     helix
     starship
