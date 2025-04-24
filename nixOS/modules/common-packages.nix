@@ -8,6 +8,7 @@
     wget
     jq
     firefox
+    zsh
   ] ++ (with pkgsUnstable; [
     helix
     bitwarden-desktop

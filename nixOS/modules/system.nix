@@ -25,11 +25,13 @@
 
   
   virtualisation.docker.enable = true;
+  programs.zsh.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rmoses = {
     isNormalUser = true;
     description = "Robert Moses";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
   };
 
   system.stateVersion = "24.11";
