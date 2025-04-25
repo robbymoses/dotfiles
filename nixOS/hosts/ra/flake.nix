@@ -33,7 +33,7 @@
     htop
     tree
   ] ++ (with pkgsUnstable; [
-    dbvisualizer
+    dbeaver-bin
   ]);
 }
 
