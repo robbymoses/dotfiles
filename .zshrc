@@ -15,6 +15,8 @@ eval "$(starship init zsh)"
 
 eval "$(zoxide init zsh)"
 
+eval "$(direnv hook zsh)"
+
 # Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions

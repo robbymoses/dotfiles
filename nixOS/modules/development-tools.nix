@@ -6,6 +6,7 @@
     direnv
   ] ++ (with pkgsUnstable; [
     neovim
+    dbeaver-bin
     lazygit
     lazydocker
     better-commits
