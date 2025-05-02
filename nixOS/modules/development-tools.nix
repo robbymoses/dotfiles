@@ -10,6 +10,7 @@
     lazygit
     lazydocker
     better-commits
+    bruno
   ]);
 }
 

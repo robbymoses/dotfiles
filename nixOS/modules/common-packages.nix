@@ -3,16 +3,14 @@
 {
   environment.systemPackages = with pkgs; [
     git
-    ghostty
     curl
     wget
     jq
-    firefox
     zsh
     stow
-    zellij
   ] ++ (with pkgsUnstable; [
     zoxide
+    zellij
     yazi
     fzf
     helix

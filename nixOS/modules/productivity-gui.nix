@@ -4,7 +4,8 @@
   environment.systemPackages = with pkgs; [
     obsidian
   ] ++ (with pkgsUnstable; [
-   
+    ghostty
+    firefox
   ]);
 }
 

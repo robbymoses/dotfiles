@@ -27,9 +27,9 @@ zinit light Aloxaf/fzf-tab
 autoload -Uz compinit && compinit
 
 # Keybinds
-bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+#bindkey -e
+#bindkey '^p' history-search-backward
+#bindkey '^n' history-search-forward
 
 # History
 HISTSIZE=5000
