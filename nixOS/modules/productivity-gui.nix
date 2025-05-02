@@ -5,6 +5,7 @@
     obsidian
   ] ++ (with pkgsUnstable; [
     ghostty
+    brave
     firefox
   ]);
 }
