@@ -6,6 +6,7 @@
   ] ++ (with pkgsUnstable; [
     ghostty
     brave
+    vscode
     firefox
   ]);
 }

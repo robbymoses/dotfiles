@@ -44,7 +44,14 @@
               inherit pkgsStable pkgsUnstable;
             };
           };
-        };
+
+	  vulcan = nixosSystem {
+	    inherit system;
+            modules = sharedModules ++ [./hosts/vulcan/flake.nix];
+            specialArgs = {
+              inherit pkgsStable pkgsUnstable;
+            };
+          };
+	};
       };
 }
-

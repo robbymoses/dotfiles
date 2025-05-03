@@ -8,6 +8,8 @@
     jq
     zsh
     stow
+    gcc
+    cmake
   ] ++ (with pkgsUnstable; [
     zoxide
     zellij
