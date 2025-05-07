@@ -19,6 +19,7 @@
     starship
     bitwarden-desktop
     docker-compose
+    vim
   ]);
 }
 

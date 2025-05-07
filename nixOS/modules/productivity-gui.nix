@@ -8,11 +8,7 @@
     code-cursor
     brave
     vscode
-<<<<<<< HEAD
-    code-cursor
-=======
     discord
->>>>>>> refs/remotes/origin/master
     firefox
   ]);
 }
