@@ -5,8 +5,10 @@
     obsidian
   ] ++ (with pkgsUnstable; [
     ghostty
+    code-cursor
     brave
     vscode
+    discord
     firefox
   ]);
 }
