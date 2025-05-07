@@ -7,6 +7,7 @@
     ghostty
     brave
     vscode
+    code-cursor
     firefox
   ]);
 }
