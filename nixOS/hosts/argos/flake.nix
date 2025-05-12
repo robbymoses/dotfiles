@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../../modules/development-tools.nix
       ../../modules/productivity-gui.nix
+      ../../modules/hyprland.nix
     ];
 
   # Bootloader
@@ -33,8 +34,6 @@
   environment.systemPackages = with pkgs; [
   ] ++ (with pkgsUnstable; [
     twingate
-    dbvisualizer
-    shopify-cli
   ]);
 }
 

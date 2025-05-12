@@ -37,8 +37,6 @@
   ] ++ (with pkgsUnstable; [
     # Additional packages from unstable
     kitty
-    rofi-wayland
-    waybar-hyprland
   ]);
 
   # Enable XDG portal
@@ -46,7 +44,6 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
     ];
   };
 

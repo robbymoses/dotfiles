@@ -11,6 +11,7 @@
     lazydocker
     better-commits
     bruno
+    nodejs_22
   ]);
 }
 
