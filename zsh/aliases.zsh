@@ -2,6 +2,7 @@ alias rebuild="sudo nixos-rebuild switch --flake $HOME/dotfiles/nixOS"
 alias cd="z"
 alias zf="__zoxide_zi"
 alias dc="docker compose"
+alias nixClean="nix-env --delete-generations +3 && nix-store --gc"
 # Windmill Aliases
 if [ "$(hostname)" = "argos" ]; then
   wmill() (
