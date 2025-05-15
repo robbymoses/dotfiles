@@ -34,6 +34,7 @@
   environment.systemPackages = with pkgs; [
   ] ++ (with pkgsUnstable; [
     twingate
+    google-cloud-sdk
   ]);
 }
 
