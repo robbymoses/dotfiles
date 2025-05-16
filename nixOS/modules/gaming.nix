@@ -1,16 +1,12 @@
 { config, pkgs, pkgsUnstable, ... }:
 
 {
+
   environment.systemPackages = with pkgs; [
-    obsidian
   ] ++ (with pkgsUnstable; [
-    ghostty
-    spotify
-    code-cursor
-    brave
-    vscode
-    discord
-    firefox
+    steam
+    runelite
+
   ]);
 }
 

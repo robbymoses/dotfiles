@@ -4,6 +4,7 @@
   # Enable Hyprland
   programs.hyprland = {
     enable = true;
+    withUWSM = true;
   };
 
   # Required for Hyprland
@@ -12,16 +13,18 @@
   # Common Hyprland packages
   environment.systemPackages = with pkgs; [
     # Core
-    waybar
-    swaylock
+    #waybar
+    #dunst
+    #hyprpaper
+    #swaylock
     #swayidle
     #wl-clipboard
-    wofi
-    mako
+    #wofi
+    #mako
     #grim
     #slu
     #wf-recorder
-    hyprpaper
+    #hyprpaper
     #xdg-desktop-portal-hyprland
     #xdg-desktop-portal-gtk
 
@@ -31,10 +34,16 @@
     #pamixer
     #networkmanagerapplet
     #blueman
-    gtk3
+    #gtk3
     #gsettings-desktop-schemas
   ] ++ (with pkgsUnstable; [
     # Additional packages from unstable
+    gtk3
+    waybar
+    dunst
+    wofi
+    hyprpaper
+    hyprpicker
     kitty
   ]);
 

@@ -15,11 +15,14 @@
     zellij
     yazi
     fzf
+    ripgrep
     helix
     starship
     bitwarden-desktop
     docker-compose
     vim
+    killall
+    fish
   ]);
 }
 

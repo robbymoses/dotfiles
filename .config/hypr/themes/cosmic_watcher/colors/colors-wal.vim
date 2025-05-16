@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/rmoses/dotfiles/.config/hypr/themes/cosmic_watcher/watcher_of_the_cosmic_gate.jpg"
+let background = "#0c090a"
+let foreground = "#cac1ca"
+let cursor     = "#cac1ca"
+
+" Colors
+let color0  = "#0c090a"
+let color1  = "#614D65"
+let color2  = "#6B536E"
+let color3  = "#85647A"
+let color4  = "#775187"
+let color5  = "#8D6F92"
+let color6  = "#A252B0"
+let color7  = "#cac1ca"
+let color8  = "#8d878d"
+let color9  = "#614D65"
+let color10 = "#6B536E"
+let color11 = "#85647A"
+let color12 = "#775187"
+let color13 = "#8D6F92"
+let color14 = "#A252B0"
+let color15 = "#cac1ca"

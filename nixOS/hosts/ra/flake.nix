@@ -5,6 +5,10 @@
        # Copy /etc/nixos/hardware.nix 
       ./hardware-configuration.nix
       ../../modules/development-tools.nix
+      ../../modules/productivity-gui.nix
+      ../../modules/hyprland.nix
+      ../../modules/gaming.nix
+      ../../modules/flatpak.nix
     ];
 
   # Bootloader

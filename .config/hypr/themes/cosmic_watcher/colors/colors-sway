@@ -1,0 +1,21 @@
+set $wallpaper /home/rmoses/dotfiles/.config/hypr/themes/cosmic_watcher/watcher_of_the_cosmic_gate.jpg
+
+set $background #0c090a
+set $foreground #cac1ca
+
+set $color0 #0c090a
+set $color1 #614D65
+set $color2 #6B536E
+set $color3 #85647A
+set $color4 #775187
+set $color5 #8D6F92
+set $color6 #A252B0
+set $color7 #cac1ca
+set $color8 #8d878d
+set $color9 #614D65
+set $color10 #6B536E
+set $color11 #85647A
+set $color12 #775187
+set $color13 #8D6F92
+set $color14 #A252B0
+set $color15 #cac1ca

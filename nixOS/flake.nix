@@ -26,6 +26,7 @@
       sharedModules = [
         ./modules/common-packages.nix
         ./modules/system.nix
+        ./modules/fonts.nix
       ];
     in {
       nixosConfigurations = {

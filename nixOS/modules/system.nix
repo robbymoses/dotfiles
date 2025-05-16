@@ -6,6 +6,7 @@
   time.timeZone = "America/Chicago";
 
   services.openssh.enable = true;
+  services.flatpak.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 

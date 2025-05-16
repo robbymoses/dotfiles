@@ -2,15 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    obsidian
   ] ++ (with pkgsUnstable; [
-    ghostty
-    spotify
-    code-cursor
-    brave
-    vscode
-    discord
-    firefox
+    nerd-fonts.jetbrains-mono
   ]);
+
+  fonts.packages = [
+    pkgsUnstable.jetbrains-mono
+  ];
 }
 
