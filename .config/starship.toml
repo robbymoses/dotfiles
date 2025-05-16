@@ -1,212 +1,43 @@
+# Suppress the newline between modules
+add_newline = false
+
+# Format the prompt with custom layout
 format = """
-$os\
-[\uE0B0](fg:bar_one bg:bar_two)\
-$custom$directory\
-[\uE0B0](fg:bar_two bg:bar_three)\
-$git_branch\
-$git_status\
-[\uE0B0](fg:bar_three bg:bar_four)\
-$c\
-$dart\
-$elixir\
-$elm\
-$golang\
-$haskell\
-$java\
-$julia\
-$lua\
-$nodejs\
-$nim\
-$php\
-$python\
-$rlang\
-$ruby\
-$rust\
-$scala\
-[\uE0B0](fg:bar_four)\
+$git_branch$git_status
+$directory$fill$time
 """
 
-right_format = """
-[\uE0B2](fg:bar_three)\
-$time\
-"""
-
-palette = 'theme'
-
-# Defines the colour palette for the theme
-[palettes.theme]
-bar_one = '#C0CAF5'
-bar_two = '#6992D7'
-bar_three = '#394260'
-bar_four = '#212736'
-bar_five = '#1D2230'
-text_one = '#090C0C'
-text_two = '#EEEEEE'
-text_three = '#A3AED2'
-
-[os]
-style = 'bg:bar_one fg:text_one'
-format = '[ $symbol ]($style)'
-disabled = false
-
-[os.symbols]
-Alpine = ''
-Amazon = ''
-Android = ''
-Arch = ''
-CentOS = ''
-Debian = ''
-DragonFly = ''
-Emscripten = ''
-EndeavourOS = ''
-Fedora = ''
-FreeBSD = ''
-Garuda = '󰛓'
-Gentoo = ''
-HardenedBSD = '󰞌'
-Illumos = '󰈸'
-Linux = ''
-Macos = ''
-Manjaro = ''
-Mariner = ''
-MidnightBSD = ''
-Mint = ''
-NetBSD = ''
-NixOS = ''
-OpenBSD = '󰈺'
-SUSE = ''
-OracleLinux = '󰌷'
-Pop = ''
-Raspbian = ''
-Redhat = ''
-RedHatEnterprise = ''
-Redox = '󰀘'
-Solus = '󰠳'
-openSUSE = ''
-Ubuntu = ''
-Unknown = ''
-Windows = '󰍲'
-
-[directory]
-truncation_length = 0
-truncation_symbol = '.../'
-truncate_to_repo = false
-fish_style_pwd_dir_length = 1
-style = 'bold fg:text_two bg:bar_two'
-format = '[ $path ]($style)'
-
-[custom.home]
-when = ' test "$HOME" = "$PWD" '
-style = 'bold fg:text_two bg:bar_two'
-symbol = ' '
-
-[custom.folder]
-when = ' test "$HOME" != "$PWD" '
-style = 'bold fg:text_two bg:bar_two'
-symbol = ' '
-
-[directory.substitutions]
-'Documents' = ' '
-'Downloads' = ' '
-'Music' = ' '
-'Pictures' = ' '
-
+# Git Branch: show only in Git repos
 [git_branch]
-symbol = ' '
-style = 'fg:text_three bg:bar_three'
-format = '[ $symbol $branch ]($style)'
+format = "[$branch]($style) "
+style = "bold purple"
+only_in_repo = true
 
+# Git Status: show only in Git repos
 [git_status]
-style = 'fg:text_three bg:bar_three'
-format = '[$all_status$ahead_behind ]($style)'
+format = "[$all_status$ahead_behind]($style) "
+style = "red"
+only_in_repo = true
 
-[c]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
+# Directory config
+[directory]
+truncation_length = 1
+truncate_to_repo = false
+style = "cyan"
+format = "[\\[$path\\]]($style) "
+# Custom logic to display ../<folder> style after 40 chars
+read_only = " 🔒"
+home_symbol = "~"
+truncation_symbol = "../"
 
-[dart]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
+# Use the fill module to right-align time
+[fill]
+symbol = " "
 
-[elixir]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[elm]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[golang]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[haskell]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[java]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[julia]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[lua]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[nodejs]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[nim]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[php]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[python]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) (\($virtualenv\) )]($style)'
-
-[rlang]
-symbol = 'ﳒ '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[ruby]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[rust]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
-[scala]
-symbol = ' '
-style = 'fg:text_three bg:bar_four'
-format = '[ $symbol ($version) ]($style)'
-
+# Time module on the right
 [time]
 disabled = false
-time_format = '%R'                   # Hour:Minute Format
-style = 'fg:text_three bg:bar_three'
-format = '[   $time ]($style)'
+format = "[$time]($style)"
+style = "bold yellow"
+time_format = "%H:%M"  # Or use "%T" for full time
+

@@ -7,6 +7,7 @@
 
   services.openssh.enable = true;
   services.flatpak.enable = true;
+  services.blueman.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
