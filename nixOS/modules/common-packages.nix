@@ -10,6 +10,7 @@
     stow
     gcc
     cmake
+    gnumake
   ] ++ (with pkgsUnstable; [
     zoxide
     zellij

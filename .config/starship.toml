@@ -11,17 +11,15 @@ $directory$fill$time
 [git_branch]
 format = "[$branch]($style) "
 style = "bold purple"
-only_in_repo = true
 
 # Git Status: show only in Git repos
 [git_status]
 format = "[$all_status$ahead_behind]($style) "
 style = "red"
-only_in_repo = true
 
 # Directory config
 [directory]
-truncation_length = 1
+truncation_length = 3
 truncate_to_repo = false
 style = "cyan"
 format = "[\\[$path\\]]($style) "

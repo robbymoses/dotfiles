@@ -6,6 +6,8 @@
       ./hardware-configuration.nix
       ../../modules/productivity-gui.nix
       ../../modules/development-tools.nix
+      ../../modules/hyprland.nix
+      ../../modules/flatpak.nix
     ];
   # intel
   hardware.graphics = {
