@@ -44,6 +44,7 @@
     wofi
     hyprpaper
     hyprpicker
+    hyprlock
     kitty
   ]);
 

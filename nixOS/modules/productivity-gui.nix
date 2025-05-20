@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    obsidian
   ] ++ (with pkgsUnstable; [
     ghostty
     spotify
@@ -11,6 +10,8 @@
     vscode
     discord
     firefox
+    joplin-desktop
+    obsidian
   ]);
 }
 

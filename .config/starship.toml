@@ -1,15 +1,14 @@
-# Suppress the newline between modules
 add_newline = false
-
 # Format the prompt with custom layout
 format = """
 $git_branch$git_status
 $directory$fill$time
+> 
 """
 
 # Git Branch: show only in Git repos
 [git_branch]
-format = "[$branch]($style) "
+format = " [$branch]($style) "
 style = "bold purple"
 
 # Git Status: show only in Git repos
