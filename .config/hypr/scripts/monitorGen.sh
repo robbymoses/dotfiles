@@ -9,6 +9,7 @@ enable_duo_screen=false
 
 if ["$1" == "true"]; then
     enable_duo_screen=true
+fi
 
 # Monitor Information
 HOME_PRIMARY="H1AK500000"
@@ -30,7 +31,7 @@ while read -r monitor; do
     if [[ "$name" == "eDP-1" ]]; then
         if [[ $model == "0x419D" ]]; then
             # Asus Zenbook Duo
-            monitor_commands+=("eDP-1,2800x1800@120,0x0,1")
+            monitor_commands+=("eDP-1,2800x1800@120,0x0,2")
         else
             # Safe to assume default to be 1080p @ 60
             monitor_commands+=("eDP-1,1920x1080@60,0x0,1")
@@ -43,7 +44,7 @@ while read -r monitor; do
         # optional flag, if true is passed, set up the
         # second screen, if not disable it.
         if [ "$enable_duo_screen" == true ]; then
-            monitor_commands+=("eDP-2,2800x1800@120,0x1800,1")
+            monitor_commands+=("eDP-2,2800x1800@120,0x1800,2")
         else
             monitor_commands+=("eDP-2,disable")
         fi
