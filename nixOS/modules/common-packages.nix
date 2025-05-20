@@ -15,6 +15,7 @@
     zoxide
     zellij
     yazi
+    bc
     fzf
     ripgrep
     helix
