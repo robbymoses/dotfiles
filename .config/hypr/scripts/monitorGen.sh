@@ -5,6 +5,11 @@
 # - bc
 # - hyprland
 
+enable_duo_screen=false
+
+if ["$1" == "true"]; then
+    enable_duo_screen=true
+
 # Monitor Information
 HOME_PRIMARY="H1AK500000"
 WORK_PRIMARY=""
@@ -35,9 +40,13 @@ while read -r monitor; do
 
     if [[ "$name" == "eDP-2" ]]; then
         # Asus Zenbook Duo contains 2 screens
-        # If eDP-2 is present, assume it's the ZenBook Duo
-        # will manually enable it when needed
-        monitor_commands+=("eDP-2,disable")
+        # optional flag, if true is passed, set up the
+        # second screen, if not disable it.
+        if [ "$enable_duo_screen" == true ]; then
+            monitor_commands+=("eDP-2,2800x1800@120,0x1800,1")
+        else
+            monitor_commands+=("eDP-2,disable")
+        fi
         continue
     fi
 
@@ -53,7 +62,7 @@ while read -r monitor; do
                 fi
             fi
         done
-        monitorString="$name,5120x1440@$max_hz,0x-1440"
+        monitorString="$name,5120x1440@$max_hz,0x-1440,1"
         monitor_commands+=("$monitorString")
         continue
     fi
