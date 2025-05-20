@@ -7,7 +7,7 @@
 
 enable_duo_screen=false
 
-if ["$1" == "true"]; then
+if [ "$1" == "enable_duo" ]; then
     enable_duo_screen=true
 fi
 
@@ -19,7 +19,7 @@ WORK_SECONDARY=""
 monitor_commands=()
 
 # Get monitor info as JSON
-monitors=$(hyprctl monitors -j)
+monitors=$(hyprctl monitors all -j)
 
 # Loop over each monitor
 while read -r monitor; do
